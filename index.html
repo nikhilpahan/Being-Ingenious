@@ -1,47 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Being Ingenious</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.cdnfonts.com/css/itc-avant-garde-gothic-std" rel="stylesheet">
-</head>
-<body>
-  <header class="header">
-    <div class="header__container">
-      <img src="assets/logo bi 2.png" alt="Being Ingenious Logo" class="header__logo">
-      <nav class="header__nav">
-        <a href="#" class="header__link">being ingenious</a>
-        <a href="#" class="header__link">meet ingenious</a>
-        <a href="#" class="header__link">services</a>
-        <a href="#" class="header__link">business consultation</a>
-        <a href="#" class="header__link">what’s new</a>
-        <a href="#" class="header__cta">
-          <span class="header__cta-icon"></span>
-          free consultation
-        </a>
-      </nav>
-    </div>
-  </header>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Being Ingenious - Digital Marketing Agency</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts - Using 'Poppins' as a substitute for ITC Avant Garde Gothic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
 
-  <section class="hero">
-    <video autoplay muted loop class="hero__video">
-      <source src="assets/videos/hero-bg.mp4" type="video/mp4">
-    </video>
-    <div class="hero__overlay"></div>
-    <div class="hero__content">
-      <h1 class="hero__title">
-        be the <span class="hero__title--brand">brand</span> everyone talks about.
-      </h1>
-      <p class="hero__description">
-        we’re being ingenious® — a 360° digital marketing agency blending design, strategy, and tech to turn bold ideas into measurable growth.
-      </p>
-      <a href="#" class="hero__button">
-        <span>our work</span>
-        <span class="hero__button-arrow"></span>
-      </a>
+    <!-- Link to your external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- 
+      Website Wrapper 
+      This div wraps the entire content of the page.
+    -->
+    <div id="website-wrapper" class="relative w-full min-h-screen overflow-x-hidden">
+
+        <!-- 
+          Hero Section 
+          This is the main section for the top part of the homepage.
+        -->
+        <header class="relative z-20">
+            <!-- 
+              Navigation Bar 
+              Contains the logo, navigation links, and a call-to-action button.
+            -->
+            <nav class="container mx-auto px-6 py-4 flex justify-between items-center bg-white bg-opacity-20 backdrop-blur-md rounded-b-lg shadow-sm">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <img src="https://placehold.co/82x82/002035/ffffff?text=Logo" alt="Being Ingenious Logo" class="w-16 h-16 md:w-20 md:h-20 rounded-full">
+                </div>
+
+                <!-- Desktop Navigation Links -->
+                <ul class="hidden lg:flex items-center space-x-8 text-base font-medium text-black">
+                    <li><a href="#" class="hover:text-brand-blue transition-colors duration-300">being ingenious</a></li>
+                    <li><a href="#" class="hover:text-brand-blue transition-colors duration-300">meet ingenious</a></li>
+                    <li><a href="#" class="hover:text-brand-blue transition-colors duration-300">services</a></li>
+                    <li><a href="#" class="hover:text-brand-blue transition-colors duration-300">business consultation</a></li>
+                    <li><a href="#" class="hover:text-brand-blue transition-colors duration-300">what’s new</a></li>
+                </ul>
+
+                <!-- CTA Button -->
+                <a href="#" class="hidden lg:flex items-center space-x-2 px-4 py-2 bg-white bg-opacity-50 border border-gray-300 rounded-lg hover:bg-opacity-75 transition-all duration-300">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    <span class="font-semibold">free consultation</span>
+                </a>
+                
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden text-black">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </nav>
+        </header>
+
+        <main class="relative">
+            <!-- 
+              Hero Content Section
+              This section contains the main headline and a brief description.
+            -->
+            <section id="hero" class="relative h-screen flex flex-col justify-center items-center text-center -mt-24">
+                <!-- Background Video -->
+                <div class="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
+                    <video class="w-full h-full object-cover" src="https://assets.mixkit.co/videos/preview/mixkit-marketing-and-social-media-video-34148-large.mp4" autoplay loop muted playsinline></video>
+                    <div class="absolute top-0 left-0 w-full h-full bg-white bg-opacity-70"></div>
+                </div>
+
+                <!-- Hero Content -->
+                <div class="relative z-10 container mx-auto px-6 flex flex-col items-center">
+                    <h1 class="hero-heading text-4xl md:text-6xl font-bold brand-dark-blue leading-tight">
+                        Be the <span class="brand-blue">brand</span> Everyone Talks About.
+                    </h1>
+                </div>
+            </section>
+            
+            <!-- 
+                Bottom Information Bar 
+                Contains a short description and a link to view work.
+            -->
+            <div class="absolute bottom-0 left-0 w-full z-10 p-8 md:p-12">
+                <div class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+                    <p class="text-base md:text-xl text-black max-w-2xl text-center md:text-left">
+                        We’re Being Ingenious® — a 360° digital marketing agency blending design, strategy, and tech to turn bold ideas into measurable growth.
+                    </p>
+                    <a href="#" class="flex items-center gap-4 px-6 py-4 bg-white bg-opacity-40 border border-gray-300 rounded-lg backdrop-blur-md hover:bg-opacity-60 transition-all duration-300 shadow-lg">
+                        <span class="text-2xl md:text-4xl font-bold lowercase">Our work</span>
+                        <svg class="w-8 h-8 md:w-12 md:h-12 transform -rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+                    </a>
+                </div>
+            </div>
+
+        </main>
     </div>
-  </section>
+
 </body>
 </html>
